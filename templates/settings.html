@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Page</title>
+    <link rel="stylesheet" href="static/css/settings.css">
+</head>
+
+<body>
+    <div class="settings-page">
+        <form action="/settings_save" method="post" class="settings-page">
+            <div class="option-input">
+                <label>Change Email</label>
+                <input type="email" name="email">
+            </div>
+            <div class="option-input">
+                <label>Change Password</label>
+                <input type="password" name="password">
+            </div>
+            <div class="option-input">
+                <label>Change Phone Number</label>
+                <input type="tel" name="phone">
+            </div>
+            <div class="notification-settings">
+                <h3>Notification Settings</h3>
+                <label>Email: <input type="checkbox" name="notify_email"></label>
+                <label>Phone: <input type="checkbox" name="notify_phone"></label>
+                <label>App: <input type="checkbox" name="notify_app"></label>
+                <div>
+                    <label>Brief: <input type="radio" name="notification" value="brief"></label>
+                    <label>Normal: <input type="radio" name="notification" value="normal"></label>
+                    <label>Detailed: <input type="radio" name="notification" value="detailed"></label>
+                </div>
+            </div>
+            <div class="contact-us">
+                <label>Contact Us</label>
+                <textarea name="contact_us"></textarea>
+            </div>
+            <button type="submit" class="option-button">Save Changes</button>
+        </form>
+    </div>
+</body>
+
+</html>
